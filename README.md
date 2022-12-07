@@ -1,34 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Delicious-food-recipes
+![app main page](./images/main-page.jpg)
 
-## Getting Started
+## A demonstration of advanced React development in the form of a recipe tracking app
 
-First, run the development server:
+A CRUD application allows a user to create, read, update or delete selected data. For this project, I built the interface of a food recipe CRUD app. The app will allow a user to add new recipes, display a list of recipes and delete a recipe from the list by clicking a delete button. This project is designed to demonstrate my ability to work with rendering and state management using React, including meeting objectives such as:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Installing packages via NPM
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Running tests from the command line
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Writing React function components
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Using hooks like useState()
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Debugging React code through console output
 
-## Learn More
+## Create Recipe
+To create a recipe entry, the app has a form with input fields for the name of the dish, the cuisine it belongs to, and a URL that points to a picture of the dish. This component utilizes ```<textarea>``` for the ingredients and preparation. 
+ ![Create Dish Layout](./images/create-recipe.jpg) 
+  
+## List Recipes
+To read and display the list of recipes, this component uses a table structure. Each recipe displays the name, cuisine, photo, ingredients, preparation and a delete button. Clicking the delete button should remove the entire row/recipe from the list.  A demonstration of the layout is shown below:
+![List Dish Layout](./images/recipes.jpg)
 
-To learn more about Next.js, take a look at the following resources:
+## Styling
+Some of the styling elements and properties used to acheive a smooth, fluid layout include:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Using the ```nth-child``` to set the width of the columns.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Using the ```nth-child(odd)``` to set the table's zebra striping color pattern for the rows in tbody.
 
-## Deploy on Vercel
+- The preparation and ingredient columns display a scrollbar if there is too much text.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Uses the ```object-fit``` property to scale-down the images and set the image width and height to 100%.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Concepts and tools used to assist in the implementation of the project:
+
+- **Single-responsibility principle:** A principle that states that each module, function, or component in a program should have responsibility for one single part of the program.
+- **ES6 Importing and exporting**, including default/named exports and named imports.
+- **JSX:** called JSX, it is a syntax extension to JavaScript. Using it with React helps describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.
+- **Functional components:** JavaScript functions that returns JSX
+
